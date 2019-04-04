@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Webtop</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="Desktop">
+        <!--Files Window-->
+        <div id="filesWindow" class="card border-secondary mb-3 window">
+          <div id="filesTitle" class="card-header window-title">
+            <span>File Explorer</span>
+            <button id="btnFA" class="btn btn-danger window-close-button" onclick="toggleFilesWindow()">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+          <div id="filesContent" class="card-body window-content">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Cras justo odio
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Dapibus ac facilisis in
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Morbi leo risus
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="textEditorWindow" class="card border-secondary mb-3 window">
+          <div id="textEditorTitle" class="card-header window-title">
+            <span>Text Editor</span>
+            <button id="btnFA" class="btn btn-danger window-close-button" onclick="toggleTextEditorWindow()">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+          <div id="textEditorContent" class="card-body window-content">
+            <textarea class="textEditorTextArea"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="Taskbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary taskbar">
+          <button id="btnFA" class="btn btn-secondary taskbar-button" onclick="toggleFilesWindow()">
+            <i class="fa fa-folder"></i>
+          </button>
+          <button id="btnFA" class="btn btn-secondary taskbar-button" onclick="toggleTextEditorWindow()">
+            <i class="fa fa-file"></i>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
